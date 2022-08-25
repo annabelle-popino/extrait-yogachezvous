@@ -1,0 +1,265 @@
+@media screen and (max-width: 1400px) {
+    .single-video-container {
+        width: 80%;
+    }
+
+    .vp-center {
+        height: auto;
+    }
+
+    .section-quisommesnous img {
+        width: 52%;
+    }
+
+    .bloc-text-qui {
+        width: 50%;
+        padding:15px 30px 5px 35px;
+    }
+
+    .bloc-text-qui h3 {
+        left: -80px;
+        top: 43px;
+    }
+
+    .bloc-text-qui img {
+        width: 30px !important;
+    }
+}
+
+@media screen and (max-width: 1253px) {
+    .section-video article {
+        width: 30%;
+    }
+
+    .text-bloc-discipline {
+        display:none;
+    }
+
+    .project-tiles {
+        justify-content: space-between;
+    }
+
+    .section-video {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .section-quisommesnous {
+        background-color: #ecebeb;
+    }
+
+    .section-quisommesnous img {
+        padding:30px;
+    }
+
+    .bloc-text-qui img {
+        padding:0 !important;
+    }
+
+    .bloc-text-qui {
+        padding: 15px 30px 35px 0px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .intro-page .container-intro-text {
+        padding: 20px 20px 20px 30px;
+    }
+
+    .page-blog .article {
+        width: 30%;
+    }
+
+    .container-infos-abonnement {
+        width: 80%;
+    }
+
+    .page-login {
+        flex-direction: column;
+    }
+
+    #post-250 {
+        width: 60%;
+        margin:0 auto 80px;
+    }
+
+    .noabonnement {
+        padding-left: 0;
+    }
+
+    .june-mensuel-login {
+        margin-bottom:20px !important;
+    }
+
+    .site-info-footer {
+        flex-direction:column;
+        text-align:center;
+        padding: 80px 0px;
+    }
+
+    .footer-col1 {
+        margin: 0 auto;
+        padding-bottom:30px;
+        flex-direction:column;
+    }
+
+    .footer-col1 img {
+        margin: 0 auto;
+    }
+
+    .footer-col2 {
+        padding-bottom:30px;
+    }
+
+    .footer-col3 {
+        margin:0 auto;
+    }
+
+    .footer-col1-text {
+        padding-top:20px;
+    }
+
+    .footer-col2 {
+        margin-left:0;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .section-profs .prof {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .page-login {
+        margin-top:0;
+    }
+
+    .title-noabo, .text-noabo {
+        text-align:center;
+    }
+
+
+    #post-250 {
+        width: 90%;
+    }
+
+    .filter {
+        padding-top: 30px;
+    }
+
+    .page-blog {
+        padding: 25px 0;
+    }
+
+    .section-profs {
+        padding: 0;
+    }
+
+    .section-video article {
+        width: 46%;
+    }
+
+    .intro-page {
+        flex-direction:column;
+    }
+
+    .intro-page img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .intro-page .container-intro-text {
+        width: 75%;
+        padding: 40px;
+        text-align: center;
+        background-color: white;
+        margin: -80px auto 0 auto;
+        z-index: 10;
+    }
+
+    .page-blog .article {
+        width: 48%;
+    }
+
+    .page-abonnements .entry-header {
+        display:none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .container-single-prof {
+        flex-direction:column;
+    }
+
+    .text-prof-video {
+        padding:30px 0;
+    }
+
+    .repeteur-disciplines a {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 738px) {
+
+    .container-infos-abonnement {
+        width: 90%;
+    }
+
+    .section-video article {
+        width: 100%;
+    }
+
+    .searchandfilter li {
+        padding-top:7px;
+    }
+
+    .intro-page .container-intro-text {
+        width: 80%;
+        margin: -20px auto 0 auto;
+    }
+
+    .texte_introduction_page {
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 17px;
+        padding-top: 13px;
+    }
+
+    .intro-page h3 {
+        font-size: 30px;
+    }
+
+    .repeteur-disciplines a {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .section-profs .prof {
+        width: 46%;
+    }
+
+    .page-blog .article {
+        width: 100%;
+    }
+
+    .container-infos-abonnement {
+        width: 100%;
+    }
+
+    .container-abonnement {
+        flex-direction:column;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .section-profs .prof {
+        width: 100%;
+    }
+}

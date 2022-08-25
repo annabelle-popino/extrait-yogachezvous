@@ -1,0 +1,1968 @@
+/*
+Theme Name: Chez June
+Theme URI: yogachezvous.fr
+Author: Annabelle Neau
+Author URI: https://popino.fr
+Description: Thème chez june
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+
+/*** Basics ***/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    text-align: center;
+    font-size:16px;
+    font-style: normal;
+    font-weight: 100;
+    margin: auto;
+    text-decoration: none;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color:black;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing:2px;
+    outline: none;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration:none;
+}
+
+a:active, a:focus
+{
+    outline:none !important;
+    text-decoration:none;
+}
+
+a:visited {
+    color: black;
+}
+
+.site-header {
+    padding: 0 10px !important;
+}
+
+h2 {
+    font-family:'Fjalla One', sans-serif;
+    letter-spacing:2px;
+    font-weight:normal;
+    text-transform:uppercase;
+}
+
+.logo-site {
+    width:140px;
+    transition: all 800ms;
+    -webkit-transition: all 800ms;
+    -moz-transition: all 200ms;
+}
+
+.logo-green {
+    opacity: 0;
+    position: absolute;
+    width: 140px;
+    left: 0px;
+    top: 0px;
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+}
+
+.container-logo:hover .logo-green {
+    opacity:1;
+    transition: all 800ms ease;
+    -webkit-transition: all 800ms ease;
+    -moz-transition:  all 800ms ease;
+}
+
+.container-logo:hover .logo-site {
+    opacity:0;
+    transition: all 800ms ease;
+    -webkit-transition: all 800ms ease;
+    -moz-transition:  all 800ms ease;
+}
+
+.container-logo {
+    width: 135px;
+    height: 91px;
+    position: relative;
+}
+
+.site-branding {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+/*** Menu ***/
+
+#menu-menu_header {
+    display:flex;
+    flex-direction:row;
+}
+
+#menu-menu_header a, #menu-menu_header a {
+    margin:0 25px;
+    text-transform:uppercase;
+    font-size:13px;
+    display: inline-block;
+    position:relative;
+    padding-bottom:15px;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight:normal;
+}
+
+#menu-menu_header a:hover {
+    color:black;
+    transition:0.5s;
+}
+
+
+#menu-menu_header a:after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    right: 5px;
+    left: 5px;
+    height: 1px;
+    background-color: black;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all .4s;
+}
+
+#menu-menu_header a:hover:after,
+#menu-menu_header a:focus:after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#menu-menu_header a {
+    text-transform:uppercase;
+    font-size:13px;
+}
+
+#menu-item-294 {
+    line-height: 8px;
+    margin-top:20Px;
+}
+
+#menu-item-294 a:after {
+    display:none;
+}
+
+#menu-item-294 a {
+    color: white !important;
+    font-size: 11px;
+    border-radius: 7px;
+    padding: 6px 10px;
+}
+
+#menu-item-294 a:hover {
+    transition:0.5s;
+}
+
+#menu-item-253 a {
+    display: inline-block;
+    position:relative;
+    padding-bottom:15px;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight:normal;
+}
+
+#menu-item-253 a:hover {
+    color:#ac7441;
+    transition:0.5s;
+}
+
+#menu-item-253 a:after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    right: 5px;
+    left: 5px;
+    height: 1px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all .4s;
+}
+
+#menu-item-253 a:hover:after,
+#menu-item-253 a:focus:after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slider-home {
+    position:relative;
+}
+
+.slider-title {
+    z-index: 9;
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slide-title-principal {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 39px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0 0 10px;
+    line-height: 45px;
+}
+
+.slide-title-secondaire {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:bold;
+    margin: 0 0 25px;
+    line-height:26px;
+}
+
+.slide-lien-bouton {
+    color: white !important;
+    font-family: 'Raleway', sans-serif;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 12px;
+    padding: 10px 15px;
+}
+
+.slide-lien-bouton:hover {
+    transition:0.5s;
+}
+
+/*** BLOC DISCIPLINE HOME ***/
+
+.repeteur-disciplines {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    padding-top:30px;
+}
+
+.repeteur-disciplines a {
+    width:32%;
+}
+
+.section-discipline {
+    padding: 80px 0;
+    max-width: 88%;
+    margin: 0 auto;
+}
+
+h3 {
+    font-family:'Fjalla One', sans-serif;
+    font-size:33px;
+    color:#313131;
+    text-transform:uppercase;
+    font-weight:normal;
+    letter-spacing:2px;
+    margin:0;
+}
+
+.textleft {
+    text-align:left;
+}
+
+.text-intro-discipline {
+    font-family:'Raleway', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight:bold;
+    color:#828282;
+    margin:0;
+    padding:10px 0;
+    letter-spacing:1px;
+}
+
+.title-bloc-discipline {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 32px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0px 0px 10px 0px;
+    border-radius: 7px;
+    position:relative;
+
+}
+
+.title-bloc-discipline:after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    right: 5px;
+    left: 15%;
+    height: 2px;
+    background-color: white;
+    width:70%;
+}
+
+.link-bloc {
+    position:relative;
+}
+
+.container-title-bloc-discipline {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-bloc-discipline {
+    position: absolute;
+    bottom: 4px;
+    opacity: 0;
+    transform: translateY(1px);
+    transition: all .3s;
+    color: white;
+    font-size: 15px;
+    line-height: 23px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.link-bloc:hover .text-bloc-discipline {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bloc-container-discipline img {
+    width:100%;
+    height:100%;
+}
+
+.container-img-discipline {
+    background-color: #212121;
+    width: 100%;
+    height: 98%;
+    position: absolute;
+    top:0;
+    opacity:0.7;
+    transition: all .3s;
+}
+
+.link-bloc:hover .container-img-discipline {
+    opacity: 0.4;
+}
+
+.section-quisommesnous {
+    display:flex;
+    flex-direction:row;
+}
+
+.section-quisommesnous img {
+    width:60%;
+    height:100%;
+}
+
+.bloc-text-qui {
+    width: 45%;
+    padding: 35px 100px 35px 35px;
+    background-color: #ecebeb;
+    position:relative;
+}
+
+.bloc-text-qui h3 {
+    padding: 15px;
+    position: absolute;
+    left: -80px;
+    top: 60px;
+    background-color: #ecebeb;
+}
+
+/*** Section Qui sommes nous ***/
+
+.text-quisommenous, .bloc-text-qui p {
+    color: #828282;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.text-quisommenous {
+    padding-top:80px;
+}
+
+.lien-quisommenous {
+    color: white;
+    font-size: 11px;
+    width: 200px;
+    border-radius: 7px;
+    padding: 6px 10px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.lien-quisommenous:visited {
+    color:white;
+}
+
+/*** Répéteur RS ***/
+
+.repeteur-rs-qui {
+    text-align:left;
+}
+
+.repeteur-rs-qui img {
+    width:29px;
+    height:auto;
+    transition:0.4s;
+}
+
+.repeteur-rs-qui img:hover {
+    opacity:0.7;
+}
+
+.container-lien-quisommesnous {
+    text-align:left;
+    margin-bottom:20px;
+}
+
+.margin-container {
+    margin-left:12px;
+    flex: 100%;
+}
+
+/*** FOOTER ***/
+
+.site-info-footer {
+    display:flex;
+    flex-direction:row;
+    padding:80px 130px;
+    text-align:left;
+    font-size:12px;
+    letter-spacing:1px;
+    font-weight:bold;
+    line-height:20px;
+    justify-content: space-around;
+}
+
+.site-info-footer p {
+    margin:0;
+}
+
+#menu-menu_footer {
+    display:flex;
+    flex-direction:column;
+}
+
+#menu-menu_footer {
+    margin:0;
+}
+
+.footer-col1 {
+    display:flex;
+    flex-direction:row;
+}
+
+.footer-col1 img {
+    width: 100px;
+    height: 100px;
+    margin-right:15px;
+    margin-top:-13px;
+}
+
+.footer-col2 {
+    margin-left:40px;
+    text-transform:uppercase;
+}
+
+.footer-col3 {
+    margin-left:40px;
+}
+
+.mailpoet_submit {
+    background-color:transparent !important;
+    border:none !important;
+    padding:0 !important;
+}
+
+#mailpoet_form_1 .mailpoet_paragraph {
+    margin-bottom: 0px !important;
+}
+
+.mailpoet_text {
+    font-size:13px;
+    font-family:'Raleway', sans-serif;
+    font-weight:bold;
+    color:white !important;
+    background-color:transparent !important;
+    border:2px solid white !important;
+    border-radius: 7px !important;
+    padding: 5px 13px !important;
+}
+
+.mailpoet_form.mailpoet_form_successfully_send .mailpoet_validate_success {
+    left: 0 !important;
+    margin-left:60px;
+}
+
+#mailpoet_form_1 form.mailpoet_form {
+    padding: 0px !important;
+}
+
+.newsletter-title {
+    text-transform: uppercase;
+    padding-bottom: 7px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/*** PAGE VIDEOS ***/
+
+.section-video {
+    display:flex;
+    flex-direction:row;
+    max-width:90%;
+    margin:0 auto;
+    padding:80Px 0;
+    flex-wrap:wrap;
+}
+
+.section-video article {
+    width: 31%;
+    text-align: left;
+    position: relative;
+    margin: 13px 13px 40px 13px;
+}
+
+.section-video article p {
+    margin:0;
+}
+
+
+h4 {
+    font-family:'Fjalla One', sans-serif;
+    color: #262626;
+    font-size:22px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight: normal;
+    margin:0;
+    padding:10px 0;
+}
+
+.text-video {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.cat-discipline-video {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 7px;
+    padding: 5px 7px;
+}
+
+.container-cat-discipline-video {
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+
+.intro-page {
+    display:flex;
+    flex-direction:row;
+}
+
+.intro-page img {
+    width:60%;
+    height:100%;
+}
+
+.intro-page p {
+    margin:0;
+}
+
+.intro-page h3 {
+    font-size:40px;
+}
+
+.intro-page .container-intro-text {
+    width:40%;
+    padding: 40px 80px 40px 40px;
+    text-align:left;
+}
+
+.sous-titre-page {
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:2Px;
+    line-height: 20Px;
+    padding-top: 5px;
+}
+
+.texte_introduction_page {
+    font-size:15px;
+    letter-spacing:1px;
+    line-height:22px;
+    padding-top:13px;
+}
+
+/*** PAGE LES PROFS ***/
+
+.section-profs {
+    display:flex;
+    flex-direction:row;
+    max-width:90%;
+    margin:0 auto;
+    padding:80Px 0;
+    flex-wrap:wrap;
+}
+
+.section-profs .prof {
+    width: 23%;
+    text-align: left;
+    position: relative;
+    margin: 13px 10px 40px 10px;
+}
+
+.section-profs article p {
+    margin:0;
+}
+
+.prof img {
+    width:100%;
+    height:auto;
+}
+
+.position-team {
+    color: #616161;
+    font-size:14px;
+    line-height:19px;
+    font-weight:bold;
+}
+
+.section-profs h4 {
+    padding:5px 0;
+}
+
+.description-team {
+    font-size:12px;
+    line-height:19px;
+    font-weight:bold;
+    padding-top:2px;
+}
+
+.section-video-home {
+    display: flex;
+    flex-direction: row;
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 80Px 0;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.section-video-home article {
+    width: 32%;
+    text-align: left;
+    position: relative;
+    margin-bottom:30px;
+}
+
+.section-video-home article p {
+    margin:0;
+}
+
+.section-video-home h3 {
+    flex-basis:100%;
+    padding-bottom:40px;
+}
+
+/*** SINGLE VIDEO ***/
+
+.single-video h1 {
+    font-family:'Fjalla One', sans-serif;
+    font-size:33px;
+    color:#313131;
+    text-transform:uppercase;
+    font-weight:normal;
+    letter-spacing:2px;
+    margin:0;
+    text-align:left;
+}
+
+.entry .entry-title:before {
+    display:none;
+}
+
+.entry .entry-header {
+    margin: 80px 0 20px 0;
+}
+
+.entry-meta {
+    display:none;
+}
+
+#id-frame {
+    width:1100px;
+    height:620px;
+}
+
+.entry-footer {
+    display:none;
+}
+
+.single-video-container {
+    width:100%;
+    margin:0 auto;
+    padding-bottom:100px;
+}
+
+.single-video-container #id-frame {
+    width:100%;
+}
+
+.container-cat-discipline-single-video {
+    text-align:left;
+    margin-right:15px;
+}
+
+.category-single-video {
+    display:flex;
+    flex-direction:row;
+}
+
+.entry .entry-header {
+    margin: 80px 0 0px 0;
+}
+
+.single-video-container .text-video {
+    color: #828282;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.relation-prof {
+    text-align:left;
+}
+
+.relation-prof p {
+    margin:0;
+    font-family:"Fjalla One";
+    font-size:27px;
+    letter-spacing:1px;
+    color:#666666;
+}
+
+.section-intro-video {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.section-single-prof {
+    background-color:#ecebeb;
+    padding:100px 0;
+}
+
+.container-single-prof {
+    width:89%;
+    margin:0 auto;
+    display:flex;
+    flex-direction:row;
+}
+
+.title-video-prof {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 33px;
+    color: #313131;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 0;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.text-prof-video {
+    color: #828282;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding:30px;
+}
+
+.container-single-prof .lien-quisommenous {
+    background-color: #171717;
+}
+
+.container-single-prof .lien-quisommenous:hover {
+    background-color: #4e4d4d;
+}
+
+.text-prof-video .container-lien-quisommesnous {
+    margin-top:10px;
+}
+
+.title-video-similaire {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 33px;
+    color: #313131;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: left;
+    width:88%;
+    margin:0 auto;
+    padding-top:80px;
+}
+
+.section-similaire .section-video {
+    padding-top:15px;
+}
+
+.container-title {
+    width:88%;
+    margin:0 auto;
+    padding-top:100px;
+}
+
+.single-prof .section-video {
+    padding-top:30px;
+}
+
+.container-arrow {
+    padding-top:30px;
+}
+
+.container-arrow a {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 15px;
+    text-transform:uppercase;
+}
+
+.container-arrow a:hover {
+    color:#313131;
+}
+
+.section-video article, .prof {
+    position:relative;
+}
+
+.section-video article h4, .prof h4 {
+    transform: translateX(1px);
+    transition: all .3s;
+}
+
+.section-video article:hover h4 {
+    transform: translateX(20px);
+    transition: all .4s;
+}
+
+.prof:hover h4 {
+    transform: translateX(20px);
+    transition: all .4s;
+}
+
+.prof:hover .fa-arrow-right {
+    opacity: 1;
+    font-size:12px;
+    position:absolute;
+    top: 12px;
+    left:0px;
+}
+
+.prof .fa-arrow-right {
+    opacity: 0;
+    position: absolute;
+    top: 13px;
+    left:6px;
+}
+
+.article:hover .fa-arrow-right {
+    opacity: 1;
+    font-size:12px;
+    position:absolute;
+    top: 18px;
+    left:0px;
+}
+
+.article .fa-arrow-right {
+    opacity: 0;
+    position: absolute;
+    top: 13px;
+    left:6px;
+}
+
+.article h4 {
+    transform: translateX(1px);
+    transition: all .3s;
+}
+
+.article:hover h4 {
+    transform: translateX(20px);
+    transition: all .4s;
+}
+
+
+.section-video article .fa-arrow-right {
+    font-size:12px;
+    opacity:0;
+    transform: translateX(1px);
+    transition: all .3s;
+    position:absolute;
+    top: 17px;
+    color: black;
+}
+
+.container-title-video {
+    position:relative;
+}
+
+.section-video article:hover .fa-arrow-right {
+    opacity: 1;
+    transform: translateZ(0);
+}
+
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+figure.snip1205 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 4px;
+    background: #000000;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+figure.snip1205 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+figure.snip1205 img {
+    max-width: 100%;
+    vertical-align: top;
+}
+figure.snip1205 i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    font-size: 34px;
+    color: #000000;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+figure.snip1205 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.section-video article:hover img,
+.section-video article.hover img {
+    opacity: 0.3;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.section-video article:hover i,
+.section-video article.hover i {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.section-profs .prof:hover img,
+.section-profs .prof.hover img {
+    opacity: 0.3;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.section-profs .prof:hover .fa-plus,
+.section-profs .prof.hover .fa-plus {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.article:hover img,
+.article.hover img {
+    opacity: 0.3;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.article:hover .fa-feather-alt,
+.article.hover .fa-feather-alt {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.container-title-video-home {
+    width:88%;
+    margin:80px auto 0;
+}
+
+.home .section-video {
+    padding-top:30px;
+}
+
+.filter {
+    padding-top:80px;
+    text-align: left;
+    width:88%;
+    margin:0 auto;
+}
+
+ul {
+    padding-left:0;
+}
+.filter ul {
+    padding-left:0;
+}
+
+.searchandfilter select {
+    font-family:'Fjalla One', sans-serif;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:2Px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.searchandfilter li {
+    padding-right: 17px;
+}
+
+.filter input[type="submit"] {
+    padding: 5px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2Px;
+    border-radius: 5px;
+    background-color: black;
+    outline:none;
+}
+
+.filter input[type="submit"]:hover {
+    background-color: #6d6d6d;
+}
+
+.container-single-prof p {
+    margin:5px 0;
+}
+
+/*** Page Blog ***/
+
+.page-blog {
+    padding:80px 0;
+    width:90%;
+    flex-direction:row;
+    display:flex;
+    flex-wrap:wrap;
+    margin:0 auto;
+    justify-content: space-between;
+}
+
+.page-blog .article {
+    width:23%;
+    text-align:left;
+    margin-bottom: 50px;
+}
+
+.page-blog .article p {
+    margin:0;
+}
+
+.actu-img img {
+    width:100%;
+    height:auto;
+}
+
+.image-filters-enabled .site-header.featured-image .site-featured-image:after {
+    background: none;
+    opacity: .8;
+    z-index: 3;
+}
+
+.image-filters-enabled .site-header.featured-image .site-featured-image .post-thumbnail img {
+    filter: none;
+}
+
+.site-header.featured-image .site-featured-image .post-thumbnail img {
+    display:none;
+}
+
+.image-filters-enabled .site-header.featured-image:after {
+    display:none;
+}
+
+.site-featured-image {
+    display:none;
+}
+
+.image-filters-enabled .site-header.featured-image .site-branding-container:after {
+    display:none;
+}
+
+.site-header.featured-image .site-branding-container {
+    margin-bottom: auto;
+}
+
+.site-header.featured-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 0;
+}
+
+.site-header.featured-image {
+    margin-bottom:0;
+}
+
+.container-article-recents {
+    background-color:#ecebeb;
+    padding-top:80px;
+}
+
+.container-article-recents h3 {
+    width:90%;
+    margin:0 auto;
+    text-align:left;
+}
+
+.container-article-recents .page-blog {
+    padding:40px 0;
+}
+
+.entry .entry-content > *, .entry .entry-summary > *, .entry .entry-summary > .wp-block-group > .wp-block-group__inner-container > *, .entry .entry-content > .wp-block-group > .wp-block-group__inner-container > * {
+    margin: 0px auto;
+}
+
+.entry .entry-content, .entry .entry-summary {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
+
+.entry-header h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 39px;
+    margin-bottom: 40px auto;
+    color: #313131;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+    width:60%;
+}
+
+.entry .entry-title {
+    margin: 0 auto;
+}
+
+.entry .entry-content > *, .entry .entry-summary > *, .entry .entry-summary > .wp-block-group > .wp-block-group__inner-container > *, .entry .entry-content > .wp-block-group > .wp-block-group__inner-container > * {
+    max-width: 100%;
+}
+
+.single-article h4 {
+    font-weight:normal;
+    padding-top:32px !important;
+}
+
+h4 strong {
+    font-weight:normal;
+}
+
+/*** Single Article ***/
+
+.single-article {
+    margin:80px auto !important;
+    max-width: 80%;
+}
+
+.single-article h3 {
+    line-height:25px;
+    font-size:20px;
+    font-weight: bold;
+    letter-spacing: 2Px;
+    padding-top: 5px;
+    padding-bottom:30px;
+}
+
+.single-video-container h1 {
+    margin:0 !important;
+}
+
+.single-video-container .single-article, .single-video-container .entry-content {
+    margin:0 !important;
+}
+
+.site-header.featured-image {
+    text-shadow: none;
+}
+
+/*** Page Login ***/
+
+.page-login .entry .entry-content {
+    text-align:center !important;
+}
+
+.page-login .entry .entry-title {
+    margin-bottom:40px;
+}
+
+#loginform label {
+    font-family:'Fjalla One', sans-serif;
+    text-transform:uppercase;
+    font-weight:normal;
+    letter-spacing:2Px;
+    padding-bottom:7px;
+}
+
+#loginform input[type="submit"] {
+    font-family:'Fjalla One', sans-serif;
+    text-transform:uppercase;
+    font-weight:normal;
+    letter-spacing:2Px;
+    background:black;
+    padding: 7Px 10px;
+}
+
+#loginform input[type="submit"]:hover {
+    background: #474747;
+}
+
+.page-login {
+    margin-top: 105px;
+    margin-bottom: 113px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.pmpro_actions_nav a {
+    font-family:'Raleway', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.pmpro_actions_nav {
+    text-align: left;
+    padding-left:0;
+}
+
+.pmpro_actions_nav a:hover {
+    color:#313131;
+}
+
+.pmpro_login_wrap hr {
+    display:none;
+}
+
+#loginform input {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    line-height: 20px;
+    background-color: #d5d5d5;
+    width: 100%;
+}
+
+#pmpro_levels_table thead {
+    display:none;
+}
+
+.login-remember input {
+    width:4% !important;
+}
+
+.login-remember label {
+    font-size:13px;
+}
+
+#pmpro_levels_table tbody {
+    display:flex;
+    flex-direction:row;
+    margin-bottom:50px;
+}
+
+#pmpro_levels_table tbody tr {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    margin: 0 auto;
+}
+
+/*** Page Adhésion ***/
+
+.page-adhesion .pmpro_actions_nav {
+    margin-bottom:147px;
+}
+
+.page-adhesion .entry .entry-title {
+    margin-bottom:40px;
+}
+
+#pmpro_levels_table .odd td:first-child {
+    background-color:#313131;
+    color:white;
+    font-family:'Fjalla One', sans-serif;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    padding:15px 0;
+    font-size:25px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+#pmpro_levels_table .odd td:last-child {
+    font-family:'Fjalla One', sans-serif;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    padding:15px 0;
+    font-size:16px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+
+#pmpro_levels_table .odd td:last-child a {
+    background-color:#313131;
+    border-radius:7px;
+    width:fit-content;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    margin:0 auto;
+    font-family:'Fjalla One', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:16px;
+    font-weight:normal;
+}
+
+#pmpro_levels_table .odd {
+    border-radius:17px;
+}
+
+.container-abonnement-home {
+    background-color:#ecebeb;
+    padding:80px 0;
+}
+
+.container-infos-abonnement {
+    width:60%;
+    margin:0 auto;
+    text-align:center;
+}
+
+.container-abonnement {
+    display:flex;
+    flex-direction:row;
+}
+
+.container-abonnement div {
+    width:94%;
+    margin:0 auto;
+}
+
+.june-mensuel a, .june-annuel a {
+    color: white !important;
+    font-size: 15px;
+    border-radius: 7px;
+    padding: 6px 10px;
+    font-weight: bold;
+}
+
+.june-mensuel a:hover, .june-annuel a:hover {
+    background-color:#6d6d6d;
+}
+
+.abonnement-title {
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 25px 30px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    font-size: 25px;
+    line-height:30px;
+    margin-bottom:0;
+}
+
+.container-description-abo {
+    background-color:white;
+    border-bottom-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+    padding: 45px 30px;
+}
+
+.container-description-abo ul {
+    list-style:none;
+    text-align:left;
+    padding-bottom:15Px;
+}
+
+.abonnement-price {
+    font-size:33px;
+    font-family:'Fjalla One', sans-serif;
+    text-transform:uppercase;
+    line-height:30px;
+    margin-top:0;
+
+}
+
+.container-infos-abonnement h3 {
+    padding-bottom:30px;
+}
+
+.container-description-abo ul li {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 31px;
+    letter-spacing: 2px;
+}
+
+.container-description-abo ul li:before {
+    content: "\f00c";
+    padding-right: 8px;
+    font-family: "Font Awesome 5 Free"; font-weight: 900;
+    font-size:11px;
+    color: #828282;
+}
+
+.page-paiement-adhesion {
+    padding-bottom:80px;
+}
+.page-paiement-adhesion .entry .entry-title {
+    margin-bottom:30px;
+}
+
+
+.pmpro_checkout-fields p {
+    margin:0;
+}
+
+abbr {
+    font-size: 32px;
+    color: red;
+    vertical-align: top;
+}
+
+form.pmpro_form .pmpro_checkout-fields div, #loginform p {
+    margin: 0 0 15px 0;
+}
+
+.page-paiement-adhesion #pmpro_pricing_fields h3 {
+    display:none;
+}
+
+#pmpro_billing_address_fields .pmpro_checkout-fields {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    height: 646px;
+    width: 74%;
+}
+
+.page-paiement-adhesion h1 {
+    display:none;
+}
+
+
+.entry .entry-content p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 27px;
+}
+
+.pmpro_checkout-fields p:first-child {
+    font-size:20px;
+    font-family:'Fjalla One', sans-serif;
+    color: #525252;
+    letter-spacing:1px;
+    line-height:38px;
+}
+
+label {
+    font-size:20px;
+    font-family:'Fjalla One', sans-serif;
+    color: #525252;
+    letter-spacing:1px;
+    font-weight:normal !important;
+    line-height:38px;
+}
+
+input, select, textarea {
+    font-size:14px;
+    font-family:'Raleway', sans-serif;
+    color:#525252;
+    letter-spacing:1px;
+}
+
+select {
+    padding:10px;
+    border-color:#cacaca;
+}
+
+.pmpro_message, .pmpro_success {
+    margin:15px 0 !important;
+}
+
+.entry .entry-content .wp-block-separator:not(.wp-block-separator), .entry .entry-content hr:not(.wp-block-separator) {
+    max-width: 100%;
+}
+
+.page-paiement-adhesion input[type="submit"] {
+    font-size: 17px;
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    background-color: #000000;
+    letter-spacing: 1px;
+    font-weight: normal !important;
+    line-height: 38px;
+    padding: 7px 15px;
+}
+
+.page-paiement-adhesion input[type="submit"]:hover {
+    background-color: #474747;
+}
+
+.confirmation-adhesion h1{
+    display:none;
+}
+
+.confirmation-adhesion {
+    padding-bottom:80px;
+}
+
+.pmpro_actions_nav a {
+    background-color:#000000;
+    color:white;
+    font-size:15px;
+    border-radius:7px;
+    padding:10px;
+    text-decoration:none !important;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight:normal;
+}
+
+.pmpro_actions_nav a:hover {
+    color:white !important;
+    background-color:#666666;
+}
+
+.confirmation-adhesion .pmpro_confirmation_wrap h3 {
+    margin-top:60px;
+}
+
+.compte-adherent h3 {
+    margin-bottom:25px !important;
+    margin-top:50px !important;
+}
+
+.compte-adherent h1 {
+    display:none;
+}
+
+.compte-adherent {
+    padding-bottom:80px;
+}
+
+.compte-adherent .entry-content:before {
+    display:none;
+}
+
+.compte-adherent #pmpro_account-membership, .compte-adherent #pmpro_account-profile {
+    padding-bottom:40px;
+}
+
+.profil h2 {
+    margin-bottom:30px !important;
+}
+
+.facture-adhesion {
+    padding:0 0 80px 0;
+}
+
+.facture-adhesion h1 {
+    display:none;
+}
+
+.pmpro_grey {
+    color:#000000;
+}
+
+input[type="button"]:active, input[type="button"]::selection, input[type="button"]:focus {
+    background-color:transparent;
+    outline: none;
+    text-decoration: none;
+}
+
+.entry .entry-content a:hover {
+    color:black;
+}
+
+.page-adhesion td {
+    border:none;
+}
+
+.page-adhesion .entry-content {
+    padding: 0 0 80px 0;
+    max-width:100%;
+}
+
+.page-adhesion table {
+    width:80%;
+}
+
+.page-adhesion table td {
+    background-color: #ececec;
+    padding:30px 40px;
+}
+
+.page-adhesion .odd strong {
+    font-size:21Px;
+    font-family:'Fjalla One', sans-serif;
+}
+
+.page-adhesion tr td strong {
+    font-size:21Px;
+    font-family:'Fjalla One', sans-serif;
+}
+
+.page-adhesion .pmpro_actions_nav {
+    width: 78%;
+    margin:0 auto;
+}
+
+#pmpro_levels_table tr td:first-child {
+    background-color: #313131;
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 15px 0;
+    font-size: 25px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+#pmpro_levels_table tr td:last-child a:hover {
+    background-color:#6d6d6d;
+    color:white;
+}
+
+#pmpro_levels_table tr td:last-child a {
+    background-color: #313131;
+    border-radius: 7px;
+    width: fit-content;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#pmpro_levels_table tr td:last-child {
+    padding:15px 0;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+
+.page-abonnements h1 {
+    display:none;
+}
+
+.abo-page {
+    background-color:#efefef !important;
+}
+
+.container-abonnement-page {
+    padding: 0px 0 80px;
+}
+
+.page-adhesion h1 {
+    display:none;
+}
+
+input[type="submit"] {
+    background-color:black;
+    font-family:'Fjalla One', sans-serif;
+    letter-spacing:2px;
+    font-weight:normal;
+}
+
+#lostpasswordform label{
+    text-align:center !important;
+}
+
+.page-login h1 {
+    display:none;
+}
+
+.page-login .login-remember label input {
+    font-size:12Px;
+    text-transform:initial;
+}
+
+.page-login .pmpro_actions_nav a {
+    background-color:transparent;
+    color:black;
+}
+
+.page-login .pmpro_actions_nav a:hover {
+    color:#313131 !important;
+}
+
+.title-noabo {
+    font-size: 25px;
+    font-family: 'Fjalla One', sans-serif;
+    color: #525252;
+    letter-spacing: 1px;
+    font-weight: normal !important;
+    line-height: 38px;
+    padding-left:7px;
+}
+
+.noabonnement p {
+    margin:0;
+}
+
+.noabonnement {
+    text-align: left;
+    padding-left:30px;
+}
+
+.text-noabo {
+    color: #828282;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 7px !important;
+    padding-bottom:15px;
+    padding-left:7px;
+}
+
+.june-annuel-login a, .june-mensuel-login a {
+    font-size:13px;
+}
+
+.title-login {
+    font-size:15px;
+    padding:16px;
+}
+
+.price-login {
+    font-size:25px;
+}
+
+.lien-noabo {
+    color: white !important;
+    font-size: 11px;
+    border-radius: 7px;
+    padding: 6px 10px;
+    font-family:'Fjalla One', sans-serif;
+    text-transform:uppercase;
+}
+
+.abo-page-login ul li {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 2px;
+}
+
+.abo-page-login {
+    padding:27px;
+}
+
+.abo-page-login ul {
+    padding:0;
+}
+
+
+.project-tiles {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.section-lescours {
+    padding-top:0 !important;
+}
+
+.filter h4 {
+    padding:0;
+}
+
+form.pmpro_form .input:focus, form.pmpro_form textarea:focus, form.pmpro_form select:focus, #loginform input[type=text]:focus, #loginform input[type=password]:focus, .searchandfilter select:focus{
+    outline:none;
+    border-color: black;
+}
+
+.container-article-recents a:hover {
+    color:black;
+}
+
+.sub-menu {
+    display:none;
+    position:absolute;
+    transition:0.4s;
+    background-color:white;
+    padding:0 10px 10px 10px !important;
+    text-align:left;
+    margin-top:-10px;
+    z-index:15;
+}
+
+#menu-item-253:hover .sub-menu {
+    display:block;
+    transition:0.4s;
+}
+
+.sub-menu li {
+    margin:0;
+    list-style:none;
+    padding:0 !important;
+    line-height:12px !important;
+}
+
+.sub-menu li a {
+    list-style:none !important;
+    padding:0 !important;
+    line-height:12px;
+    font-size:11px !important;
+}
+
+.sub-menu li a:hover {
+    color:#6d6d6d !important;
+}
+
+.sub-menu li a:hover:after {
+    display:none;
+}
+
+#menu-item-300 a {
+    font-size: 10px;
+    text-transform: initial;
+    letter-spacing: 1px;
+}
+
+.container-noresult {
+    padding: 30Px 0 120px;
+    text-align: left;
+    width: 88%;
+    margin: 0 auto;
+}
+
+.lien-return {
+    color: white !important;
+    font-size: 11px;
+    width: 200px;
+    border-radius: 7px;
+    padding: 6px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:black;
+}
+
+.lien-return:hover {
+    background-color: #686868;
+    color: white !important;
+}
+
+.pmpro_login_wrap {
+    background-color: #ecebeb;
+    width:100%;
+    text-align:left;
+    padding:30px;
+    border-radius:13px;
+}
+
+.pmpro_login_wrap input::selection {
+    background-color:white !important
+}
+
+.page-login .entry-header {
+    display:none;
+}
+
+#post-250 {
+    width:45%;
+}
+
+.page-contact {
+    padding: 80px 0;
+    max-width:80%;
+    text-align:left;
+    margin:0 auto;
+}
